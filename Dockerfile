@@ -1,8 +1,8 @@
 FROM python:bullseye
 
-WORKDIR /
+WORKDIR /app
 
-COPY src/* /
+COPY . /app
 
 RUN pip3 install -r requirements.txt
 

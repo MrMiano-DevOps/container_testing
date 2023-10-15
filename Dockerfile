@@ -1,11 +1,9 @@
 FROM python:3.10.12-slim
 
-WORKDIR /app
+WORKDIR /app/
 
-COPY src/ /app
+COPY src/ /app/
 
 RUN pip3 install -r requirements.txt
-
-RUN export PYTHONPATH="${PYTHONPATH}:/src/"
 
 ENTRYPOINT [ "python3", "-m", "unittest" ]
